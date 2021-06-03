@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/frameLayout"
+    tools:context=".ProfileFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_login_new"
+        android:scaleType="fitXY"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile_TopRelative"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_textNotty"
+            android:text="ColorNote"
+            android:textSize="50dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/aladin"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/afterLogin_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:gravity="center"
+                android:fontFamily="@font/aladin"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/afterLogin_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/afterLogin_textView"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:fontFamily="@font/aladin"
+                android:text=""
+                android:textColor="#A6FFFFFF"
+                android:textSize="18dp"
+                android:textIsSelectable="true"
+                android:focusable="true" />
+
+            <ImageView
+                android:id="@+id/profile_changePass"
+                android:layout_width="250dp"
+                android:layout_height="80dp"
+                android:src="@drawable/pass"
+                android:layout_margin="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/afterLogin_email"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    
+
+</FrameLayout>

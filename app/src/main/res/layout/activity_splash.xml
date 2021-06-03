@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/splashRelative"
+    tools:context=".Splash">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ColorNote"
+        android:layout_centerHorizontal="true"
+        android:textSize="50dp"
+        android:id="@+id/splash_Text"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/aladin"
+        android:textColor="@color/black"
+        />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/lottieAnimation"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        android:layout_centerInParent="true"
+        app:lottie_fileName="register_lottie.json" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/lottieAnimation_ProgressBar"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        android:layout_below="@id/lottieAnimation"
+        app:lottie_fileName="progress_bar.json" />
+
+
+    <!--<com.sasank.roundedhorizontalprogress.RoundedHorizontalProgressBar
+        android:id="@+id/splash_progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_margin="30dp"
+        android:progress="50"
+        android:layout_centerInParent="true"
+        app:backgroundColor="#000000"
+        android:layout_alignParentBottom="true"
+        app:progressColor="#1E88E5"/>-->
+
+</RelativeLayout>

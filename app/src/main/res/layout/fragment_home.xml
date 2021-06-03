@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/notes_shape">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/home_relative_tv"
+            android:text="Notes"
+            android:textSize="25dp"
+            android:fontFamily="@font/aladin"
+            android:textColor="@color/white"
+            android:gravity="left|center"
+            android:layout_marginLeft="20dp"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/iv_addNotes"
+            android:src="@drawable/add_notes"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            app:tint="@color/white" />
+
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/home_ScrollView"
+        android:layout_marginTop="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_marquee"
+                android:text="You can create max. 10 notes. Click on the TICK icon to save data. Notes created CANNOT be deleted."
+                android:textSize="15dp"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:textColor="@color/black"
+                android:layout_marginBottom="20dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_red"
+                android:id="@+id/home_relative1"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/et1_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textSize="22dp"
+                    android:inputType="textPersonName"
+                    android:hint="Title"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:backgroundTint="@color/black"
+                    app:backgroundTint="@color/black"
+                    android:layout_margin="20dp" />
+
+                <EditText
+                    android:id="@+id/et1_Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et1_Title"
+                    android:ems="10"
+                    android:hint="Description"
+                    android:backgroundTint="@color/black"
+                    app:backgroundTint="@color/black"
+                    android:inputType="textMultiLine"
+                    android:textSize="18dp"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"/>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/iv1_Tick"
+                    android:layout_below="@id/et1_Description"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/tick"
+                    android:alpha="0.5"
+                    android:layout_marginBottom="10dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/layout_yellow"
+                android:id="@+id/home_relative2"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/et2_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textSize="22dp"
+                    android:inputType="textPersonName"
+                    android:hint="Title"
+                    android:backgroundTint="@color/black"
+                    app:backgroundTint="@color/black"
+                    android:layout_margin="20dp"
+                    android:textCursorDrawable="@drawable/cursor_color"/>
+
+                <EditText
+                    android:id="@+id/et2_Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et2_Title"
+                    android:ems="10"
+                    android:hint="Description"
+                    android:backgroundTint="@color/black"
+                    app:backgroundTint="@color/black"
+                    android:inputType="textMultiLine"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:textCursorDrawable="@drawable/cursor_color"/>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/iv2_Tick"
+                    android:layout_below="@id/et2_Description"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/tick"
+                    android:alpha="0.5"
+                    android:layout_marginBottom="10dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/layout_blue"
+                android:id="@+id/home_relative3"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/et3_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textSize="22dp"
+                    android:inputType="textPersonName"
+                    android:hint="Title"
+                    android:backgroundTint="@color/black"
+                    app:backgroundTint="@color/black"
+                    android:layout_margin="20dp"
+                    android:textCursorDrawable="@drawable/cursor_color"/>
+
+                <EditText
+                    android:id="@+id/et3_Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et3_Title"
+                    android:ems="10"
+                    android:hint="Description"
+                    android:backgroundTint="@color/black"
+                    app:backgroundTint="@color/black"
+                    android:inputType="textMultiLine"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:textCursorDrawable="@drawable/cursor_color"/>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/iv3_Tick"
+                    android:layout_below="@id/et3_Description"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/tick"
+                    android:alpha="0.5"
+                    android:layout_marginBottom="10dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/layout_green"
+                android:id="@+id/home_relative4"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/et4_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textSize="22dp"
+                    android:inputType="textPersonName"
+                    android:hint="Title"
+                    android:backgroundTint="@color/black"
+                    app:backgroundTint="@color/black"
+                    android:layout_margin="20dp"
+                    android:textCursorDrawable="@drawable/cursor_color"/>
+
+                <EditText
+                    android:id="@+id/et4_Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et4_Title"
+                    android:ems="10"
+                    android:hint="Description"
+                    android:backgroundTint="@color/black"
+                    app:backgroundTint="@color/black"
+                    android:inputType="textMultiLine"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:textCursorDrawable="@drawable/cursor_color"/>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/iv4_Tick"
+                    android:layout_below="@id/et4_Description"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/tick"
+                    android:alpha="0.5"
+                    android:layout_marginBottom="10dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/layout_orange"
+                android:id="@+id/home_relative5"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/et5_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textSize="22dp"
+                    android:inputType="textPersonName"
+                    android:hint="Title"
+                    android:backgroundTint="@color/black"
+                    app:backgroundTint="@color/black"
+                    android:layout_margin="20dp"
+                    android:textCursorDrawable="@drawable/cursor_color"/>
+
+                <EditText
+                    android:id="@+id/et5_Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et5_Title"
+                    android:ems="10"
+                    android:hint="Description"
+                    android:backgroundTint="@color/black"
+                    app:backgroundTint="@color/black"
+                    android:inputType="textMultiLine"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:textCursorDrawable="@drawable/cursor_color"/>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/iv5_Tick"
+                    android:layout_below="@id/et5_Description"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/tick"
+                    android:alpha="0.5"
+                    android:layout_marginBottom="10dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/layout_yellow"
+                android:id="@+id/home_relative6"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/et6_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textSize="22dp"
+                    android:inputType="textPersonName"
+                    android:hint="Title"
+                    android:backgroundTint="@color/black"
+                    app:backgroundTint="@color/black"
+                    android:layout_margin="20dp"
+                    android:textCursorDrawable="@drawable/cursor_color"/>
+
+                <EditText
+                    android:id="@+id/et6_Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et6_Title"
+                    android:ems="10"
+                    android:hint="Description"
+                    android:backgroundTint="@color/black"
+                    app:backgroundTint="@color/black"
+                    android:inputType="textMultiLine"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:textCursorDrawable="@drawable/cursor_color"/>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/iv6_Tick"
+                    android:layout_below="@id/et6_Description"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/tick"
+                    android:alpha="0.5"
+                    android:layout_marginBottom="10dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/layout_green"
+                android:id="@+id/home_relative7"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/et7_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textSize="22dp"
+                    android:inputType="textPersonName"
+                    android:hint="Title"
+                    android:backgroundTint="@color/black"
+                    app:backgroundTint="@color/black"
+                    android:layout_margin="20dp"
+                    android:textCursorDrawable="@drawable/cursor_color"/>
+
+                <EditText
+                    android:id="@+id/et7_Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et7_Title"
+                    android:ems="10"
+                    android:hint="Description"
+                    android:backgroundTint="@color/black"
+                    app:backgroundTint="@color/black"
+                    android:inputType="textMultiLine"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:textCursorDrawable="@drawable/cursor_color"/>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/iv7_Tick"
+                    android:layout_below="@id/et7_Description"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/tick"
+                    android:alpha="0.5"
+                    android:layout_marginBottom="10dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/layout_red"
+                android:id="@+id/home_relative8"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/et8_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textSize="22dp"
+                    android:inputType="textPersonName"
+                    android:hint="Title"
+                    android:backgroundTint="@color/black"
+                    app:backgroundTint="@color/black"
+                    android:layout_margin="20dp"
+                    android:textCursorDrawable="@drawable/cursor_color"/>
+
+                <EditText
+                    android:id="@+id/et8_Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et8_Title"
+                    android:ems="10"
+                    android:hint="Description"
+                    android:backgroundTint="@color/black"
+                    app:backgroundTint="@color/black"
+                    android:inputType="textMultiLine"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:textCursorDrawable="@drawable/cursor_color"/>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/iv8_Tick"
+                    android:layout_below="@id/et8_Description"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/tick"
+                    android:alpha="0.5"
+                    android:layout_marginBottom="10dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/layout_orange"
+                android:id="@+id/home_relative9"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/et9_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textSize="22dp"
+                    android:inputType="textPersonName"
+                    android:hint="Title"
+                    android:backgroundTint="@color/black"
+                    app:backgroundTint="@color/black"
+                    android:layout_margin="20dp"
+                    android:textCursorDrawable="@drawable/cursor_color"/>
+
+                <EditText
+                    android:id="@+id/et9_Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et9_Title"
+                    android:ems="10"
+                    android:hint="Description"
+                    android:backgroundTint="@color/black"
+                    app:backgroundTint="@color/black"
+                    android:inputType="textMultiLine"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:textCursorDrawable="@drawable/cursor_color"/>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/iv9_Tick"
+                    android:layout_below="@id/et9_Description"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/tick"
+                    android:alpha="0.5"
+                    android:layout_marginBottom="10dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/layout_blue"
+                android:id="@+id/home_relative10"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/et10_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textSize="22dp"
+                    android:inputType="textPersonName"
+                    android:hint="Title"
+                    android:backgroundTint="@color/black"
+                    app:backgroundTint="@color/black"
+                    android:layout_margin="20dp"
+                    android:textCursorDrawable="@drawable/cursor_color"/>
+
+                <EditText
+                    android:id="@+id/et10_Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et10_Title"
+                    android:ems="10"
+                    android:hint="Description"
+                    android:backgroundTint="@color/black"
+                    app:backgroundTint="@color/black"
+                    android:inputType="textMultiLine"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:textCursorDrawable="@drawable/cursor_color"/>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/iv10_Tick"
+                    android:layout_below="@id/et10_Description"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/tick"
+                    android:alpha="0.5"
+                    android:layout_marginBottom="10dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/home_relative11" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
