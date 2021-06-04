@@ -1,5 +1,6 @@
 package com.example.sharedprefs_user_reg;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.text.HtmlCompat;
 
@@ -7,7 +8,9 @@ import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -22,6 +25,14 @@ public class AboutUs extends AppCompatActivity {
 
     private Handler handler;
 
+    private ImageView back;
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +40,8 @@ public class AboutUs extends AppCompatActivity {
 
         tv2=findViewById(R.id.about_contact);
         tv3=findViewById(R.id.about_marquee);
+
+        back=findViewById(R.id.about_Back);
 
         root_layout=findViewById(R.id.root_layout);
 
@@ -39,11 +52,19 @@ public class AboutUs extends AppCompatActivity {
         dialog.setContentView(R.layout.dots_progress);
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
 
+
         root_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 tv2.clearFocus();
 
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
             }
         });
 
