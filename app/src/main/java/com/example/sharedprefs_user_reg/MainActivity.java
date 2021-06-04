@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
 
         AlertDialog.Builder builder=new AlertDialog.Builder(this);
         builder.setTitle("Exit");
-        builder.setMessage("Are you sure want to exit?");
+        builder.setMessage("Do you really want to exit?");
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
