@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -118,6 +119,44 @@ public class HomeFragment extends Fragment {
         tv=view.findViewById(R.id.tv_marquee);
 
         SpannableString spannableString = new SpannableString(tv.getText().toString());
+
+        int nightModeFlags =
+                getActivity().getResources().getConfiguration().uiMode &
+                        Configuration.UI_MODE_NIGHT_MASK;
+        switch (nightModeFlags) {
+            case Configuration.UI_MODE_NIGHT_YES:
+
+                ForegroundColorSpan white = new ForegroundColorSpan(Color.WHITE);
+                spannableString.setSpan(white,
+                        0, 66, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+                tv.setText(spannableString);
+
+
+                title1.setTextColor(Color.parseColor("#FFFFFF"));
+                title2.setTextColor(Color.parseColor("#FFFFFF"));
+                title3.setTextColor(Color.parseColor("#FFFFFF"));
+                title4.setTextColor(Color.parseColor("#FFFFFF"));
+                title5.setTextColor(Color.parseColor("#FFFFFF"));
+                title6.setTextColor(Color.parseColor("#FFFFFF"));
+                title7.setTextColor(Color.parseColor("#FFFFFF"));
+                title8.setTextColor(Color.parseColor("#FFFFFF"));
+                title9.setTextColor(Color.parseColor("#FFFFFF"));
+                title10.setTextColor(Color.parseColor("#FFFFFF"));
+
+                des1.setTextColor(Color.parseColor("#FFFFFF"));
+                des2.setTextColor(Color.parseColor("#FFFFFF"));
+                des3.setTextColor(Color.parseColor("#FFFFFF"));
+                des4.setTextColor(Color.parseColor("#FFFFFF"));
+                des5.setTextColor(Color.parseColor("#FFFFFF"));
+                des6.setTextColor(Color.parseColor("#FFFFFF"));
+                des7.setTextColor(Color.parseColor("#FFFFFF"));
+                des8.setTextColor(Color.parseColor("#FFFFFF"));
+                des9.setTextColor(Color.parseColor("#FFFFFF"));
+                des10.setTextColor(Color.parseColor("#FFFFFF"));
+
+                break;
+        }
 
         ForegroundColorSpan red = new ForegroundColorSpan(Color.RED);
 
