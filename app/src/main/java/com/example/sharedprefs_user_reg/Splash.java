@@ -3,6 +3,7 @@ package com.example.sharedprefs_user_reg;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -51,6 +52,15 @@ public class Splash extends AppCompatActivity{
         anim=AnimationUtils.loadAnimation(this,R.anim.my_anim);
 
         tv.startAnimation(anim);
+
+        int nightModeFlags =
+                this.getResources().getConfiguration().uiMode &
+                        Configuration.UI_MODE_NIGHT_MASK;
+        switch (nightModeFlags) {
+            case Configuration.UI_MODE_NIGHT_YES:
+                tv.setTextColor(Color.parseColor("#FFFFFF"));
+                break;
+        }
 
         /*img=findViewById(R.id.splash_imageView);
 
